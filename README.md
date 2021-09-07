@@ -8,11 +8,15 @@ This view controller allows you to share an image the same way as a normal
 
 You can add any items you want to share, but only the image is displayed.
 
+These screenshots are taken from my app TwoSlideOver. Check it out [here](https://apps.apple.com/app/twoslideover/id1547137384)
+
 <img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPhone.png" width="236" height="512" />
 
 <img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPad_landscape.png" width="512" height="384" />
 
 <img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPad_portrait.png" width="384" height="512" />
+
+<img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_iPhone_normal.gif" width="296" height="640" />
 
 ## Input
 
