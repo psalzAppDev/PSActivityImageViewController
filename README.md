@@ -24,7 +24,7 @@ These screenshots are taken from my app TwoSlideOver. Check it out [here](https:
 
 <img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivitymageViewController_iPhone_dual.gif" width="296" height="640" />
 
-<img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_gif_iPad.gif" width="640" height="296" />
+<img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_gif_iPad.gif" width="640" height="480" />
 
 ## Input
 
