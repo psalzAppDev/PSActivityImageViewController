@@ -8,13 +8,11 @@ This view controller allows you to share an image the same way as a normal
 
 You can add any items you want to share, but only the image is displayed.
 
-<img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPhone.png" width="118" height="256" />
+<img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPhone.png" width="236" height="512" />
 
-![Screenshot iPhone](https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPhone.png)
+<img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPad_landscape.png" width="512" height="384" />
 
-![Screenshot iPad Landscape](https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPad_landscape.png)
-
-![Screenshot iPad Portrait](https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPad_portrait.png)
+<img src="https://github.com/psalzAppDev/PSActivityImageViewController/blob/main/Assets/PSActivityImageViewController_screen_iPad_portrait.png" width="384" height="512" />
 
 ## Input
 
