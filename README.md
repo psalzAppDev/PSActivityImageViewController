@@ -75,7 +75,7 @@ PSActivityImageViewController is available through [Swift Package Manager](https
 Add it to an existing Xcode project as a package dependency:
 
 1. From the **File** menu, select **Swift Packages › Add Package Dependency…**
-2. Enter "https://github.com/psalzAppDev/PSActivityImageController" into the package repository URL text field
+2. Enter "https://github.com/psalzAppDev/PSActivityImageViewController" into the package repository URL text field
 
 ## Requirements
 
