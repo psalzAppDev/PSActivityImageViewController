@@ -9,7 +9,7 @@ import UIKit
 
 /**
  This view controller allows you to share an image the same way as a normal
- `UIActivityViewController` would, with one bonus: The image is actually show on top of the
+ `UIActivityViewController` would, with one bonus: The image is actually shown on top of the
  `UIActivityViewController` with a nice blurred background.
  
  You can add any items you want to share, but only the image is displayed.
