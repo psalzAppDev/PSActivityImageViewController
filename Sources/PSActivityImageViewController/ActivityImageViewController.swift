@@ -128,12 +128,6 @@ public class ActivityImageViewController: UIViewController {
         
         super.viewDidLoad()
         
-        // Ensure that the view controller has the correct size.
-        // Confer: https://useyourloaf.com/blog/self-sizing-popovers/
-        preferredContentSize = view.systemLayoutSizeFitting(
-            UIView.layoutFittingCompressedSize
-        )
-        
         // Setup the blurred image view.
         
         blurredImageView.translatesAutoresizingMaskIntoConstraints = false
