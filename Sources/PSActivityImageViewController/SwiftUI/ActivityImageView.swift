@@ -122,9 +122,13 @@ private final class ActivityViewControllerWrapper: UIViewController {
             return
         }
         
+        let uiImage = item.image.snapshot()
+        var completeItems: [Any] = [uiImage]
+        completeItems.append(contentsOf: item.items)
+        
         let controller = ActivityImageViewController(
-            image: item.image,
-            activityItems: item.items,
+            image: uiImage,
+            activityItems: completeItems,
             activities: item.activities,
             excludedTypes: item.excludedTypes,
             completion: { [weak self] activityType, success, items, error in
@@ -140,6 +144,31 @@ private final class ActivityViewControllerWrapper: UIViewController {
         controller.popoverPresentationController?.sourceView = view
         
         present(controller, animated: true, completion: nil)
+    }
+}
+
+@available(iOS 13, *)
+extension View {
+    
+    func snapshot() -> UIImage {
+        
+        let controller = UIHostingController(rootView: self)
+        let view = controller.view
+        
+        let targetSize = controller.view.intrinsicContentSize
+        
+        view?.bounds = CGRect(origin: .zero, size: targetSize)
+        view?.backgroundColor = .clear
+        
+        let renderer = UIGraphicsImageRenderer(size: targetSize)
+        
+        return renderer.image { _ in
+            
+            view?.drawHierarchy(
+                in: controller.view.bounds,
+                afterScreenUpdates: true
+            )
+        }
     }
 }
 

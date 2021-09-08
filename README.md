@@ -73,34 +73,33 @@ present(activityImageVC, animated: true)
 import SwiftUI
 import PSActivityImageViewController
 
-struct MyView: View {
-
-    let image: Image
+struct ContentView: View {
+    
+    let image = Image("Image")
     
     @State
-    var activityItem: ActivityItem? = nil
+    var activityItem: ActivityImageItem? = nil
     
     var body: some View {
         
         VStack(spacing: 16) {
-        
+                
             image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
             
             Button(
                 action: {
-                    activityItem = ActivityImageItem(
-                        image: image,
-                        activities: image
-                    )
+                    activityItem = ActivityImageItem(image: image)
                 },
                 label: {
                     Text("Share image")
                 }
             )
-        
+            .activityImageSheet($activityItem)
         }
         .padding()
-        .activityImageSheet($activityItem)
     }
 }
 ```
