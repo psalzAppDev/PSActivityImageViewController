@@ -30,6 +30,8 @@ These screenshots are taken from my app TwoSlideOver. Check it out [here](https:
 
 - `image`: The image you want to share and at the same time display as a preview.
 - `activityItems`: All the items you want to share, with the `image` included.
+- `activities`: Optional array of `UIActivity`
+- `excludedTypes`: Optional array of excluded activity types.
 - `completion`: An optional `UIActivityViewController.CompletionWithItemsHandler`
  to handle any code after completion.
 

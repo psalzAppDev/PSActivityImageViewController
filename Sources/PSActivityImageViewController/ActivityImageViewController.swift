@@ -18,6 +18,8 @@ import UIKit
  
  - `image`: The image you want to share and at the same time display as a preview.
  - `activityItems`: All the items you want to share, with the `image` included.
+ - `activities`: Optional array of `UIActivity`
+ - `excludedTypes`: Optional array of excluded activity types.
  - `completion`: An optional `UIActivityViewController.CompletionWithItemsHandler`
   to handle any code after completion.
  
@@ -28,7 +30,7 @@ import UIKit
     image: someImage,
     activityItems: [someImage, self],
     completion: { activity, completed, _, error in
- 
+  
         if let error = error {
             print("Error: \(error.localizedDescription)")
             return
@@ -76,6 +78,8 @@ public class ActivityImageViewController: UIViewController {
      - Parameters:
         - image: The image you want to share and at the same time display as a preview.
         - activityItems: All the items you want to share, with the `image` included.
+        - activities: Optional array of `UIActivity`
+        - excludedTypes: Optional array of excluded activity types.
         - completion: An optional
          `UIActivityViewController.CompletionWithItemsHandler` to handle any code after
          completion.
@@ -86,6 +90,8 @@ public class ActivityImageViewController: UIViewController {
     public init(
         image: UIImage,
         activityItems: [Any],
+        activities: [UIActivity]? = nil,
+        excludedTypes: [UIActivity.ActivityType] = [],
         completion: UIActivityViewController.CompletionWithItemsHandler? = nil
     ) {
         
@@ -106,8 +112,11 @@ public class ActivityImageViewController: UIViewController {
         // Setup the activity view controller.
         self.activityViewController = UIActivityViewController(
             activityItems: activityItems,
-            applicationActivities: nil
+            applicationActivities: activities
         )
+        
+        // Set optional excluded activity types.
+        self.activityViewController.excludedActivityTypes = excludedTypes
         
         // Set the optional completion handler
         self.activityViewController.completionWithItemsHandler = completion
