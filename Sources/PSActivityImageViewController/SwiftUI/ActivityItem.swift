@@ -10,7 +10,7 @@ import UIKit
 /// Represents an activity for presenting an `ActivityView` (share sheet) via the `activitySheet`
 /// modifier.
 @available(iOS 13, *)
-public struct ActivityItem {
+public struct ActivityImageItem {
     
     internal var image: UIImage
     internal var items: [Any]

@@ -8,6 +8,8 @@ This view controller allows you to share an image the same way as a normal
 
 You can add any items you want to share, but only the image is displayed.
 
+A SwiftUI adaptation is also available, based on the excellent work in [ActivityView](https://github.com/SwiftUI-Plus/ActivityView).
+
 ## Screenshots
 
 These screenshots are taken from my app TwoSlideOver. Check it out [here](https://apps.apple.com/app/twoslideover/id1547137384)
@@ -37,6 +39,8 @@ These screenshots are taken from my app TwoSlideOver. Check it out [here](https:
 
 ## Usage
 
+### UIKit
+
 ```swift
 import PSActivityImageViewController
 
@@ -61,6 +65,44 @@ activityImageVC.popoverPresentationController?.sourceView = someView
 activityImageVC.popoverPresentationController?.sourceRect = someView.bounds
 
 present(activityImageVC, animated: true)
+```
+
+### SwiftUI
+
+```swift
+import SwiftUI
+import PSActivityImageViewController
+
+struct MyView: View {
+
+    let image: Image
+    
+    @State
+    var activityItem: ActivityItem? = nil
+    
+    var body: some View {
+        
+        VStack(spacing: 16) {
+        
+            image
+            
+            Button(
+                action: {
+                    activityItem = ActivityImageItem(
+                        image: image,
+                        activities: image
+                    )
+                },
+                label: {
+                    Text("Share image")
+                }
+            )
+        
+        }
+        .padding()
+        .activityImageSheet($activityItem)
+    }
+}
 ```
 
 ## Warning

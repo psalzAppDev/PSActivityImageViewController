@@ -24,8 +24,8 @@ public extension View {
         - item: The item to use for this activity.
         - onComplete: When the sheet is dismissed, this will be called with the result.
      */
-    func activitySheet(
-        _ item: Binding<ActivityItem?>,
+    func activityImageSheet(
+        _ item: Binding<ActivityImageItem?>,
         permittedArrowDirections: UIPopoverArrowDirection = .any,
         onComplete: UIActivityViewController.CompletionWithItemsHandler? = nil
     ) -> some View {
@@ -44,13 +44,13 @@ public extension View {
 private struct ActivityView: UIViewControllerRepresentable {
     
     @Binding
-    var item: ActivityItem?
+    var item: ActivityImageItem?
     
     private var permittedArrowDirections: UIPopoverArrowDirection
     private var completion: UIActivityViewController.CompletionWithItemsHandler?
     
     public init(
-        item: Binding<ActivityItem?>,
+        item: Binding<ActivityImageItem?>,
         permittedArrowDirections: UIPopoverArrowDirection,
         onComplete: UIActivityViewController.CompletionWithItemsHandler? = nil
     ) {
@@ -85,12 +85,12 @@ private struct ActivityView: UIViewControllerRepresentable {
 @available(iOS 13, *)
 private final class ActivityViewControllerWrapper: UIViewController {
     
-    var item: Binding<ActivityItem?>
+    var item: Binding<ActivityImageItem?>
     var permittedArrowDirections: UIPopoverArrowDirection
     var completion: UIActivityViewController.CompletionWithItemsHandler?
     
     init(
-        item: Binding<ActivityItem?>,
+        item: Binding<ActivityImageItem?>,
         permittedArrowDirections: UIPopoverArrowDirection,
         completion: UIActivityViewController.CompletionWithItemsHandler?
     ) {
