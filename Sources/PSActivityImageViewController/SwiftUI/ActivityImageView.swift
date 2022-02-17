@@ -121,8 +121,10 @@ private final class ActivityViewControllerWrapper: UIViewController {
             
             return
         }
-        
-        let uiImage = item.image.snapshot()
+
+        // https://github.com/psalzAppDev/PSActivityImageViewController/issues/1
+        //let uiImage = item.image.snapshot()
+        let uiImage = item.image
         var completeItems: [Any] = [uiImage]
         completeItems.append(contentsOf: item.items)
         
@@ -147,6 +149,7 @@ private final class ActivityViewControllerWrapper: UIViewController {
     }
 }
 
+/*
 @available(iOS 13, *)
 extension View {
     
@@ -171,6 +174,7 @@ extension View {
         }
     }
 }
+*/
 
 #endif
 
