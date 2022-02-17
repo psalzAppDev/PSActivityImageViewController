@@ -15,13 +15,13 @@ import SwiftUI
 @available(iOS 13, *)
 public struct ActivityImageItem {
     
-    internal var image: Image
+    internal var image: UIImage
     internal var items: [Any]
     internal var activities: [UIActivity]
     internal var excludedTypes: [UIActivity.ActivityType]
     
     public init(
-        image: Image,
+        image: UIImage,
         items: Any...,
         activities: [UIActivity] = [],
         excludedTypes: [UIActivity.ActivityType] = []
