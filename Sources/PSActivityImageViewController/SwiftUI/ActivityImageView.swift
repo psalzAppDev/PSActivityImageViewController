@@ -145,7 +145,17 @@ private final class ActivityViewControllerWrapper: UIViewController {
         
         controller.popoverPresentationController?.sourceView = view
         
-        present(controller, animated: true, completion: nil)
+        present(
+            controller,
+            animated: true,
+            completion: { [weak self] in
+
+                // This fixes a loop where the controller is shown over and over
+                // again if the controller is dismissed by swiping down instead
+                // of tapping the X button or completing the share process.
+                self?.item.wrappedValue = nil
+            }
+        )
     }
 }
 
