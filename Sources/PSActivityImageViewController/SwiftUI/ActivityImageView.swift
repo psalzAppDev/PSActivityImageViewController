@@ -9,7 +9,6 @@
 
 import SwiftUI
 
-@available(iOS 13, *)
 public extension View {
     
     /**
@@ -40,7 +39,6 @@ public extension View {
     }
 }
 
-@available(iOS 13, *)
 private struct ActivityView: UIViewControllerRepresentable {
     
     @Binding
@@ -82,7 +80,6 @@ private struct ActivityView: UIViewControllerRepresentable {
     }
 }
 
-@available(iOS 13, *)
 private final class ActivityViewControllerWrapper: UIViewController {
     
     var item: Binding<ActivityImageItem?>
@@ -160,7 +157,6 @@ private final class ActivityViewControllerWrapper: UIViewController {
 }
 
 /*
-@available(iOS 13, *)
 extension View {
     
     func snapshot() -> UIImage {

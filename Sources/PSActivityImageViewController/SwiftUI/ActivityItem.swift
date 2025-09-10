@@ -12,7 +12,6 @@ import SwiftUI
 
 /// Represents an activity for presenting an `ActivityView` (share sheet) via the `activitySheet`
 /// modifier.
-@available(iOS 13, *)
 public struct ActivityImageItem {
     
     internal var image: UIImage
